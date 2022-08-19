@@ -107,6 +107,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BotResponse.cs" />
     <Compile Include="ParseJSON.cs" />
     <Compile Include="RequestJSON.cs" />
     <Compile Include="Commands.cs" />

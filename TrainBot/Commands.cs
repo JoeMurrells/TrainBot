@@ -19,12 +19,7 @@ namespace TrainBot
 
             if(TrainStation.Valid(stationOne,stationTwo) == true)
             {
-                var requestJSON = new RequestJSON(stationOne, stationTwo, time);
-
-                for (int i = 0; i < requestJSON.ServicesArray.Length; i++)
-                {
-                    await ReplyAsync($"{stationOne} to {stationTwo} train will depart at {requestJSON.ServicesArray[i]["locationDetail"]["realtimeDeparture"]} from platform {requestJSON.ServicesArray[i]["locationDetail"]["platform"]}");
-                }
+                await ReplyAsync(BotResponse.OutputString(stationOne, stationTwo, time));
             }
             else
             {
