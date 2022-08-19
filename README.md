@@ -6,16 +6,20 @@ A discord bot which will provide the departure time and platform of a train. The
 
 Enter the command !train followed by the departing station and destination station using the stations CRS code, this will display all trains after the current time.\
 \
-Example: !train VIC BTN\
+Example: !train PRE EUS\
 \
-`VIC to BTN train will depart at 1432 from platform 18`
+`17:47 Preston (Lancs) to London Euston from platform 5`\
+`18:01 Preston (Lancs) to London Euston from platform 6`\
+`18:17 Preston (Lancs) to London Euston from platform 4`
+
 
 You can also provide a specific time in the format HHMM, this will show trains within a 2 hour window of the given time.\
 \
-Example: !train VIC BTN 1630
+Example: !train PRE EUS 1730
 
-`VIC to BTN train will depart at 1632 from platform 18`\
-`VIC to BTN train will depart at 1702 from platform 18`
+`17:45 Preston (Lancs) to London Euston from platform 5`\
+`18:04 Preston (Lancs) to London Euston from platform 6`\
+`18:17 Preston (Lancs) to London Euston from platform 4`
 
 This information is also available using the !help command.
 
