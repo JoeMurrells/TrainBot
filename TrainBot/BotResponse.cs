@@ -18,9 +18,14 @@ namespace TrainBot
 
             for (int i = 0; i < requestJSON.ServicesArray.Length; i++)
             {
-                if(int.Parse(requestJSON.ServicesArray[i]["locationDetail"]["realtimeDeparture"].ToString()) >= int.Parse(currentTime))
+                var platform = requestJSON.ServicesArray[i]["locationDetail"]["platform"];
+                if(platform == null)
                 {
-                    outputString += $"{stationOne} to {stationTwo} train will depart at {requestJSON.ServicesArray[i]["locationDetail"]["realtimeDeparture"]} from platform {requestJSON.ServicesArray[i]["locationDetail"]["platform"]}" + "\n";
+                    platform = "UNKNOWN";
+                }
+                if (int.Parse(requestJSON.ServicesArray[i]["locationDetail"]["realtimeDeparture"].ToString()) >= int.Parse(currentTime))
+                {
+                    outputString += $"**{requestJSON.ServicesArray[i]["locationDetail"]["realtimeDeparture"].ToString().Insert(2, ":")}** **{TrainStation.Stations[stationOne]}** to **{TrainStation.Stations[stationTwo]}** from platform **{platform}**" + "\n";
                 }
                 
             }

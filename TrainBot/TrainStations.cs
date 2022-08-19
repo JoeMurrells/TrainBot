@@ -20,7 +20,7 @@ namespace TrainBot
                 return false;
             }
         }
-        private static readonly Dictionary<string, string> Stations = new Dictionary<string, string>() {
+        public static readonly Dictionary<string, string> Stations = new Dictionary<string, string>() {
 
             {"ABW","Abbey Wood"},
         {"ABE","Aber"},
