@@ -1,6 +1,6 @@
 # TrainBot
 
-A discord bot which will provide the departure time and platform of a train. The data is provided by the Realtime Trains API found here https://api.rtt.io/.
+A discord bot which will provide the departure time and platform of trains in the UK. The data is provided by the Realtime Trains API found here https://api.rtt.io/.
 
 ## Usage
 
@@ -21,8 +21,17 @@ Example: !train PRE EUS 1730
 `18:04 Preston (Lancs) to London Euston from platform 6`\
 `18:17 Preston (Lancs) to London Euston from platform 4`
 
+Enter the command !search followed by a 3 digit CRS code or station name to retrieve of a list of matching stations.\
+\
+Example: !search gillingham
+
+`GIL: Gillingham (Dorset)`\
+`GLM: Gillingham (Kent)`\
+`HAM: Hamworthy`
+
 This information is also available using the !help command.
 
 ## Packages
 [Discord.net](https://discordnet.dev/index.html)\
-[JSON.net](https://www.newtonsoft.com/json)
+[JSON.net](https://www.newtonsoft.com/json)\
+[FuzzySharp](https://github.com/JakeBayer/FuzzySharp)
